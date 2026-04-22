@@ -1,0 +1,12 @@
+services:
+  speed-challenge:
+    build: .
+    image: speed-challenge
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
+    command: bash
