@@ -36,17 +36,18 @@ class SpeedDataset(Dataset):
     
     def __len__(self):
         if self.is_train:
-            return self.train.shape[0] - self.window_size + 1
+            return self.train.shape[0] - self.window_size
         else:
-            return self.verify.shape[0] - self.window_size + 1
+            return self.verify.shape[0] - self.window_size
         
 
 
 
 # test
-dataset = SpeedDataset("../data/precomputed_flows.npy", "../data/train.txt", 20)
+# dataset = SpeedDataset("../data/precomputed_flows.npy", "../data/train.txt", 20)
 
-print(dataset.train.shape)
-print(dataset.verify.shape)
-print(dataset.__getitem__(100))
-print(dataset.__len__())
+# print(dataset.train.shape)
+# print(dataset.verify.shape)
+# print(dataset.__getitem__(100)[0].shape)
+# print(dataset.__getitem__(100)[1])
+# print(dataset.__len__())

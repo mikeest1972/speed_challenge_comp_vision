@@ -63,7 +63,7 @@ Frame t, Frame t+1
 
 | Experiment | MSE (val) | Notes |
 |---|---|---|
-| baseline | — | — |
+| CNN+LSTM baseline | 4.9 (epoch 5) | Overfitting observed from epoch 6 onward (val loss 7.3 while train loss 3.8). Best model saved at epoch 5. |
 
 ---
 
